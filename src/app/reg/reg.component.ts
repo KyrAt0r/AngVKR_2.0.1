@@ -18,7 +18,6 @@ export class RegComponent {
 
   submit(user: User) {
     const body = {login: user.login, password: user.password};
-    alert (user.login);
     this.http.post('http://saber011-001-site1.htempurl.com/api/Account/register', body)
       .subscribe(
         (data: User) => {

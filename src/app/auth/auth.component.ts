@@ -12,13 +12,13 @@ export class AuthComponent {
   user: User = new User();
   receivedUser: User;
   done: boolean = false;
+  errorCode: any;
 
   constructor(private http: HttpClient) {
   }
 
   submit(user: User) {
     const body = {login: user.login, password: user.password};
-    alert (user.login);
     this.http.post('http://saber011-001-site1.htempurl.com/api/Account/login', body)
       .subscribe(
         (data: User) => {

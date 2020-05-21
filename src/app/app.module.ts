@@ -7,12 +7,14 @@ import { RegComponent } from './reg/reg.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './auth/auth.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegComponent,
-    AuthComponent
+    AuthComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

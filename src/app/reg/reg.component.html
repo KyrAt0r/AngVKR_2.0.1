@@ -1,7 +1,26 @@
-<input type="text" [(ngModel)]="user.login">
-<input type="text" [(ngModel)]="user.password">
-<button (click)="submit(user)"> Казнить </button>
-<div *ngIf="done">
-  <div>Получено от сервера:</div>
+<body>
+<div class="limiter">
+  <div class="login-cont">
+    <div class="wrap-login">
+      <div class="login-form">
+        <h1 class="login-title">
+          Регистрация
+        </h1>
+        <form action="singin">
+          <div class="wrap-input">
+            <input class="input1 typ1" type="login" placeholder="Логин" [(ngModel)]="user.login">
+            <input class="input1 typ2" type="password" placeholder="Пароль" [(ngModel)]="user.password">
+          </div>
+          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <button class="myButton" (click)="submit(user)"> Регистрация</button>
+          <div *ngIf="done">
+            <div><p>Регистрация завершена!</p></div>
 
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
+</body>
