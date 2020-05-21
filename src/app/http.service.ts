@@ -8,7 +8,11 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   postData(user: User) {
-    const body = {name: user.login, age: user.password};
+    const body = {login: user.login, password: user.password};
     return this.http.post('http://saber011-001-site1.htempurl.com/api/Account/login', body);
+  }
+
+  getData() {
+    return this.http.get('http://saber011-001-site1.htempurl.com/api/Account/GetAllUsers');
   }
 }
