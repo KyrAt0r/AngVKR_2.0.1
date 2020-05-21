@@ -34,6 +34,6 @@ ng g c 'name' --spec=false
 
 ng g m 'name' --spec=false
 
-## Доббавить запустить проект
+## Запустить проект
 
 npm start
