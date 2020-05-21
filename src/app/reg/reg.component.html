@@ -1,1 +1,7 @@
-<p>reg works!</p>
+<input type="text" [(ngModel)]="user.login">
+<input type="text" [(ngModel)]="user.password">
+<button (click)="submit(user)"> Казнить </button>
+<div *ngIf="done">
+  <div>Получено от сервера:</div>
+  <div>login: {{receivedUser.login}}</div>
+</div>
