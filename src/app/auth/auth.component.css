@@ -1,7 +1,6 @@
 body{
-
-  margin: 0;
   font-family: 'Fira Sans', sans-serif;
+
 }
 
 h1{
@@ -45,9 +44,9 @@ input{
 }
 
 .login-cont{
-  width: 100%;
-  min-height: 100%;
   display: flex;
+  min-height: 100%;
+
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -130,3 +129,4 @@ input{
   -moz-box-shadow: 10px 10px 30px 0px #d1d9e6 inset, -10px -10px 30px 0px #ffffff inset;
   box-shadow: 10px 10px 30px 0px #d1d9e6 inset, -10px -10px 30px 0px #ffffff inset;
 }
+

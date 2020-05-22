@@ -2,12 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../user';
 
+
 @Component({
   selector: 'app-reg',
   templateUrl: './reg.component.html',
   styleUrls: ['./reg.component.css']
 })
 export class RegComponent {
+
+
 
   user: User = new User();
   receivedUser: User;

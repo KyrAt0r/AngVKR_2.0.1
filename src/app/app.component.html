@@ -6,7 +6,8 @@
     <div class="sidebar">
       <h2>Sidebar</h2>
       <ul>
-        <li><a href="#"><i class="fas fa-dice-d20"></i>Home</a></li>
+        <fa-icon [icon]="faDiceD20"></fa-icon>
+        <li><a href="#"><fa-icon [icon]="faDiceD20"></fa-icon>Home</a></li>
         <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
         <li><a href="#"><i class="fas fa-address-card"></i>About</a></li>
         <li><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
@@ -16,10 +17,10 @@
       </ul>
     </div>
     <div class="main_content">
-      <router-outlet></router-outlet>
+
     </div>
   </div>
-
+  <router-outlet></router-outlet>
 </body>
 
 

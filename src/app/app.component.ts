@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
+import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  faDiceD20 = faDiceD20;
 
   user: User = new User();
   receivedUser: User;
