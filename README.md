@@ -37,3 +37,7 @@ ng g m 'name' --spec=false
 ## Запустить проект
 
 npm start
+
+## Normalize.css
+
+npm install normalize.css
