@@ -67,6 +67,12 @@ input{
   box-shadow: 18px 18px 30px 2px rgba(209, 217, 230, 1), -18px -18px 30px 2px rgba(255, 255, 255, 1);
 }
 
+.form{
+  display: block;
+  width: 100%;
+  align-items: center;
+}
+
 .login-form{
   width: 100%;
   display: flex;
@@ -132,3 +138,10 @@ input{
   box-shadow: 10px 10px 30px 0px #d1d9e6 inset, -10px -10px 30px 0px #ffffff inset;
 }
 
+input:required:valid {
+  border-color: green;
+}
+
+input:invalid {
+  border-color: red;
+}

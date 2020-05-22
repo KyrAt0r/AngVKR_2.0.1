@@ -45,6 +45,12 @@ input{
   right: 0;
 }
 
+.form{
+  display: block;
+  width: 100%;
+  align-items: center;
+}
+
 .login-cont{
   display: flex;
   min-height: 100%;

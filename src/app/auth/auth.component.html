@@ -12,12 +12,12 @@
         <h1 class="login-title">
           Авторизация
         </h1>
-        <form action="singin">
+        <div class="form">
           <div class="wrap-input">
-            <input class="input1 typ1" type="login"  placeholder="Логин" [(ngModel)]="user.login">
-            <input class="input1 typ2" type="password"  placeholder="Пароль" [(ngModel)]="user.password">
+            <input class="input1 typ1" type="login" min="3" placeholder="Логин" [(ngModel)]="user.login" required>
+            <input class="input1 typ2" type="password" min="3" placeholder="Пароль" [(ngModel)]="user.password" required>
           </div>
-          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <div class="g-signin2" data-theme="dark"></div>
           <button class="myButton" (click)="submit(user)"> Войти</button>
 
           <div *ngIf="done">
@@ -25,7 +25,7 @@
 
           </div>
 
-        </form>
+        </div>
       </div>
     </div>
   </div>
