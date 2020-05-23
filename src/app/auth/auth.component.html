@@ -1,33 +1,13 @@
-<head>
-  <title>COTA-portal Авторизация</title>
-  <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="751697380175 - 9glb0n13u6sa6jpus75sd65q71nf8rj2.apps.googleusercontent.com.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-</head>
-<body>
-<div class="limiter">
-  <div class="login-cont">
-    <div class="wrap-login">
-      <div class="login-form">
-        <h1 class="login-title">
-          Авторизация
-        </h1>
-        <div class="form">
-          <div class="wrap-input">
-            <input class="input1 typ1" type="login" min="3" placeholder="Логин" [(ngModel)]="user.login" required>
-            <input class="input1 typ2" type="password" min="3" placeholder="Пароль" [(ngModel)]="user.password" required>
-          </div>
-          <div class="g-signin2" data-theme="dark"></div>
-          <button class="myButton" (click)="submit(user)"> Войти</button>
-
-          <div *ngIf="done">
-            <p>zrada: {{user.password}}</p>
-
-          </div>
-
-        </div>
-      </div>
+<form (submit)="loginUser($event)">
+  <div class="container">
+    <div>
+      <input type="text" autocomplete="off" placeholder="Username" id="login">
+    </div>
+    <div>
+      <input type="password" autocomplete="off" placeholder="Password" id="password">
+    </div>
+    <div>
+      <button type="submit" id="submit">Submit</button>
     </div>
   </div>
-</div>
-</body>
+</form>

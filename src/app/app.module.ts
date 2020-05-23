@@ -10,13 +10,19 @@ import { AuthComponent } from './auth/auth.component';
 import { MainPageComponent } from './main-page/main-page.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LogoutComponent } from './loguot/loguot.component';
+
+import {AuthGuard} from './auth.guard';
+import {UserService} from './user.service';
+import {AuthService} from './auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegComponent,
     AuthComponent,
-    MainPageComponent
+    MainPageComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [AuthService, UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
