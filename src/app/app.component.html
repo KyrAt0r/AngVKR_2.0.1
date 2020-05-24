@@ -1,9 +1,61 @@
-<input type="text" [(ngModel)]="user.login">
-<input type="text" [(ngModel)]="user.password">
-  <button (click)="submit(user)"> Казнить </button>
-  <div *ngIf="done">
-    <div>Получено от сервера:</div>
-    <div>Возраст: {{receivedUser.login}}</div>
-  </div>
+<body>
+<nav class="navbar">
+  <ul class="navbar-nav">
+
+    <li class="logo">
+      <a class="nav-link" href="/home">
+        <fa-icon [icon]="faDiceD20"></fa-icon>
+        <span class="link-text logo-text">
+          COTA
+          Portal
+        </span>
+      </a>
+    </li>
+
+    <li class="logo">
+      <a class="nav-link" href="/home">
+        <fa-icon [icon]="faHome"></fa-icon>
+        <span class="link-text logo-text">
+          Галвная
+        </span>
+      </a>
+    </li>
+
+    <li class="logo">
+      <a class="nav-link" href="/home">
+        <fa-icon [icon]="faScroll"></fa-icon>
+        <span class="link-text logo-text">
+          Задачи
+        </span>
+      </a>
+    </li>
+
+    <li class="logo">
+      <a class="nav-link" href="/home">
+        <fa-icon [icon]="faBookDead"></fa-icon>
+        <span class="link-text logo-text">
+          О нас
+        </span>
+      </a>
+    </li>
+
+    <li class="logo">
+      <a class="nav-link" href="/about">
+        <fa-icon [icon]="faSignOutAlt"></fa-icon>
+        <span class="link-text logo-text">
+          Выход
+        </span>
+      </a>
+    </li>
+
+  </ul>
+</nav>
+</body>
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+
+
 
 

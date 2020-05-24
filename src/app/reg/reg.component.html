@@ -1,1 +1,17 @@
-<p>reg works!</p>
+<div class="limiter">
+  <div class="login-cont">
+    <div class="wrap-login">
+      <div class="login-form">
+        <h1 class="login-title"> Регистрация </h1>
+        <form (submit)="registerUser($event)">
+          <div class="wrap-input">
+            <input class="input1 typ1" type="login"  placeholder="Логин" id="login">
+            <input class="input1 typ2" type="password"  placeholder="Пароль" id="password">
+            <input class="input1 typ2" type="password"  placeholder="Повторите пароль" id="cpassword">
+          </div>
+          <button class="myButton" type="submit" id="submit">Регистрация</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
