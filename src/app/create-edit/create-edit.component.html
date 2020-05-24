@@ -1,0 +1,25 @@
+<p>create-edit works!</p>
+<div>
+    <select *ngIf="responsSubjects">
+      <option *ngFor="let contents of responsSubjects.content" value="{{contents.idSubject}}">
+        {{contents.nameSubject}}
+      </option>
+    </select>
+    <div></div><input (keyup.enter)="createSubject(topics)" [(ngModel)]="topics.nameTest">
+
+<!--  <div></div><input #postData (keyup.enter)="createSubject(topics)" [(ngModel)]="topics.nameSubject">-->
+  <button (click)="createSubject(topics)">Create</button>
+
+  <!--
+  <form *ngIf="responsSubjects">
+    <select name="users" size="10">
+      <option *ngFor="let contents of responsSubjects.content">
+        ID: {{contents.idSubject}}
+        User: {{contents.nameSubject}}
+      </option>
+    </select>
+  </form>
+-->
+</div>
+
+

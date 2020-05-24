@@ -10,13 +10,15 @@ import { AuthComponent } from './auth/auth.component';
 import { MainPageComponent } from './main-page/main-page.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CreateEditComponent } from './create-edit/create-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegComponent,
     AuthComponent,
-    MainPageComponent
+    MainPageComponent,
+    CreateEditComponent
   ],
   imports: [
     BrowserModule,

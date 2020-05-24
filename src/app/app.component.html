@@ -1,10 +1,37 @@
-<nav class="navbar">
-  <ul class="navbar-nav">
-    <li class="nav-item"><a href="/home"><fa-icon [icon]="faHome"></fa-icon>COTA-Portal</a></li>
-    <li class="nav-item"><a href="/home"><fa-icon [icon]="faScroll"></fa-icon>Список задача</a></li>
-    <li class="nav-item"><a href="/home"><fa-icon [icon]="faBookDead"></fa-icon>О нас</a></li>
-  </ul>
-</nav>
+<div class="back"></div>
+<body>
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="logo">
+        <a class="nav-link" href="/home">
+          <fa-icon [icon]="faHome"></fa-icon>
+          <span class="link-text logo-text">
+            COTA-Portal
+          </span>
+        </a>
+      </li>
+
+      <li class="logo">
+        <a class="nav-link" href="/create">
+          <fa-icon [icon]="faScroll"></fa-icon>
+          <span class="link-text logo-text">
+            Create
+          </span>
+        </a>
+      </li>
+
+      <li class="logo">
+        <a class="nav-link" href="/auth">
+          <fa-icon [icon]="faBookDead"></fa-icon>
+          <span class="link-text logo-text">
+            Auth
+          </span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+</body>
 <main>
   <router-outlet></router-outlet>
 </main>
