@@ -1,4 +1,27 @@
-<h1>Главная</h1>
+<h2>Главная</h2>
+<div *ngIf="responsContext">
+  <div *ngFor="let contents of responsContext.content">
+    TextTask: {{contents.textTask}}
+    <div>
+      Level: {{contents.level}}
+      AnswerTask: {{contents.answerTask}}
+    </div>
+  </div>
+</div>
+<form *ngIf="responsUsers">
+  <select name="users" size="10">
+    <option *ngFor="let contents of responsUsers.content">
+      ID: {{contents.id}}
+      User: {{contents.login}}
+    </option>
+  </select>
+</form>
 
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
+<form *ngIf="responsTeams">
+  <select name="users" size="10">
+    <option *ngFor="let contents of responsTeams.content">
+      ID: {{contents.idTeam}}
+      TeamName: {{contents.teamName}}
+    </option>
+  </select>
+</form>
