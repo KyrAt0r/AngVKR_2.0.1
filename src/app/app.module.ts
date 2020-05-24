@@ -8,13 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './auth/auth.component';
 import { MainPageComponent } from './main-page/main-page.component';
-
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LogoutComponent } from './logout/logout.component';
-
 import {AuthGuard} from './auth.guard';
 import {UserService} from './user.service';
 import {AuthService} from './auth.service';
+import {LogoutComponent} from './logout/logout.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import {AuthService} from './auth.service';
     RegComponent,
     AuthComponent,
     MainPageComponent,
-    LogoutComponent
+    LogoutComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
