@@ -25,12 +25,6 @@ export class RegComponent implements OnInit {
     const password = target.querySelector('#password').value;
     const password1 = target.querySelector('#cpassword').value;
 
-    let ErMass=1
-
-    if(password !== password1) {
-      ErMass === 1
-    }
-
     // more validation
 
     if (errors.length === 0) {
