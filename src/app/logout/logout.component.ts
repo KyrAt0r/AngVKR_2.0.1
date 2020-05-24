@@ -10,19 +10,14 @@ import { Router } from '@angular/router';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(private user: UserService, private router: Router, private auth: AuthService) { }
-
-  ngOnInit() {
-    this.user.logout().subscribe(data => {
-      if(data.success) {
-        this.router.navigate([''])
-        this.auth.setLoggedIn(false)
-      } else {
-        window.alert('Some problem')
-      }
-    })
+  constructor(private user: UserService, private router: Router, private auth: AuthService) {
   }
 
+  ngOnInit() {
+    this.router.navigate([''])
+    this.auth.setLoggedIn(false);
+    localStorage.clear();
+  }
 }
 
 

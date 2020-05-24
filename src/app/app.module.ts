@@ -24,7 +24,7 @@ import { CreateEditComponent } from './create-edit/create-edit.component';
     AuthComponent,
     MainPageComponent,
     LogoutComponent,
-    AboutComponent
+    AboutComponent,
     CreateEditComponent
   ],
   imports: [
@@ -34,7 +34,11 @@ import { CreateEditComponent } from './create-edit/create-edit.component';
     HttpClientModule,
     FontAwesomeModule
   ],
-  providers: [AuthService, UserService, AuthGuard],
+  providers: [
+    AuthService,
+    UserService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

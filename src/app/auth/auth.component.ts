@@ -29,9 +29,12 @@ export class AuthComponent implements OnInit {
     const password = target.querySelector('#password').value;
 
     this.Auth.getUserDetails(login, password).subscribe(data => {
-      if (data.responseInfo.status === 0) {
+      if (data.responseInfo.status === 0 && data.responseInfo.errorMessage === null) {
         this.router.navigate(['home']);
         this.Auth.setLoggedIn(true);
+        localStorage.setItem('user_token', data.Content.access_token);
+        localStorage.setItem('Id', String(data.responseInfo.status));
+
         this.done = true;
       } else {
         this.ermass = data.responseInfo.errorMessage;
