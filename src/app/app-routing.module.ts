@@ -6,6 +6,8 @@ import {AuthComponent} from './auth/auth.component';
 import {MainPageComponent} from './main-page/main-page.component';
 import {LogoutComponent} from './logout/logout.component';
 import {AboutComponent} from './about/about.component';
+import {CreateEditComponent} from './create-edit/create-edit.component';
+
 
 
 const routes: Routes = [
@@ -13,6 +15,7 @@ const routes: Routes = [
   {path: 'auth', component: AuthComponent},
   {path: 'home', component: MainPageComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'create', component: CreateEditComponent},
   {path: '', redirectTo: 'auth', pathMatch: 'full'},
   {path: '**', component: MainPageComponent},
   {path: 'logout', component: LogoutComponent}

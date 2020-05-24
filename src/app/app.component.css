@@ -114,6 +114,7 @@ main {
 }
 
 fa-icon{
+  font-size: 16pt;
   margin: 0px 25px 0px 25px;
 }
 
@@ -135,6 +136,9 @@ fa-icon{
 
   main {
     margin: 0;
+  }
+  .logo:last-child {
+    margin-top: 0;
   }
 }
 
