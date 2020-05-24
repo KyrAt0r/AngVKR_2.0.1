@@ -10,7 +10,7 @@ import { AuthComponent } from './auth/auth.component';
 import { MainPageComponent } from './main-page/main-page.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LogoutComponent } from './loguot/loguot.component';
+import { LogoutComponent } from './logout/logout.component';
 
 import {AuthGuard} from './auth.guard';
 import {UserService} from './user.service';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
-import { faHome, faScroll, faBookDead } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faScroll, faBookDead, faSignOutAlt, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,8 @@ export class AppComponent {
   faHome = faHome;
   faScroll = faScroll;
   faBookDead = faBookDead;
+  faSignOutAlt = faSignOutAlt;
+  faDiceD20 = faDiceD20;
 
   //user: User = new User();
   //receivedUser: User;

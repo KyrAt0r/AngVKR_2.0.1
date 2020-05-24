@@ -1,26 +1,17 @@
-<body>
 <div class="limiter">
   <div class="login-cont">
     <div class="wrap-login">
       <div class="login-form">
-        <h1 class="login-title">
-          Регистрация
-        </h1>
-        <div class="form">
+        <h1 class="login-title"> Регистрация </h1>
+        <form (submit)="registerUser($event)">
           <div class="wrap-input">
-            <input class="input1 typ1" type="login" min="10" max="100" placeholder="Логин" [(ngModel)]="user.login">
-            <input class="input1 typ2" type="password" min="10" max="100" placeholder="Пароль" [(ngModel)]="user.password">
+            <input class="input1 typ1" type="login"  placeholder="Логин" id="login">
+            <input class="input1 typ2" type="password"  placeholder="Пароль" id="password">
+            <input class="input1 typ2" type="password"  placeholder="Повторите пароль" id="cpassword">
           </div>
-          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-          <button class="myButton" (click)="submit(user)"> Регистрация</button>
-          <div *ngIf="done">
-            <div><p>Регистрация завершена!</p></div>
-
-          </div>
-
-        </div>
+          <button class="myButton" type="submit" id="submit">Регистрация</button>
+        </form>
       </div>
     </div>
   </div>
 </div>
-</body>

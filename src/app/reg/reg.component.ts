@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {User} from '../user';
+import {Router} from '@angular/router';
+
+import {AuthService} from '../auth.service';
+
 
 
 @Component({
@@ -8,28 +11,37 @@ import {User} from '../user';
   templateUrl: './reg.component.html',
   styleUrls: ['./reg.component.css']
 })
-export class RegComponent {
+export class RegComponent implements OnInit {
 
+  constructor(private auth: AuthService, private router: Router) { }
 
+  ngOnInit() { }
 
-  user: User = new User();
-  receivedUser: User;
-  done: boolean = false;
+  registerUser(event) {
+    event.preventDefault();
+    const errors = [];
+    const target = event.target;
+    const login = target.querySelector('#login').value;
+    const password = target.querySelector('#password').value;
+    const password1 = target.querySelector('#cpassword').value;
 
-  constructor(private http: HttpClient) {
-  }
+    let ErMass=1
 
-  submit(user: User) {
-    const body = {login: user.login, password: user.password};
-    alert (user.login);
-    this.http.post('http://saber011-001-site1.htempurl.com/api/Account/register', body)
-      .subscribe(
-        (data: User) => {
-          this.receivedUser = data;
-          this.done = true;
-        },
-        error => console.log(error)
-      );
+    if(password !== password1) {
+      ErMass === 1
+    }
+
+    // more validation
+
+    if (errors.length === 0) {
+      this.auth.registerUser(login, password).subscribe(data => {
+        console.log(data);
+        if (data.success) {
+          this.router.navigate(['dashboard']);
+        }
+      });
+    }
+    console.log(login, password);
   }
 
 }
