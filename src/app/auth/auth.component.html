@@ -10,8 +10,13 @@
             <input class="input1 typ1"  placeholder="Логин" id="login">
             <input class="input1 typ2"  placeholder="Пароль" id="password">
           </div>
-          <button class="myButton" type="submit" id="submit">Войти</button>
+          <button class="myButtonL" type="submit" id="submit">Войти</button>
+
+          <button class="myButtonR" onclick="document.location='/reg'" >Регистрация</button>
         </form>
+        <div class="error" *ngIf="ermass">
+          <p> <fa-icon [icon]="faExclamationCircle"></fa-icon> {{ermass}}</p>
+        </div>
       </div>
     </div>
   </div>

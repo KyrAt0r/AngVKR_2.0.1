@@ -4,6 +4,7 @@ body{
 }
 
 .load {
+
   position: absolute;
   text-align: center;
   padding: 100px 0 0 0;
@@ -12,6 +13,7 @@ body{
   width: 100%;
   height: 100%;
 }
+
 
 #loading {
   -webkit-animation: rotation 2s infinite linear;
