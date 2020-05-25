@@ -9,8 +9,13 @@
             <input class="input1 typ2" type="password"  placeholder="Пароль" id="password">
             <input class="input1 typ2" type="password"  placeholder="Повторите пароль" id="cpassword">
           </div>
-          <button class="myButton" type="submit" id="submit">Регистрация</button>
+          <button class="myButtonR" type="submit" id="submit">Регистрация</button>
+          <button class="myButtonL" onclick="document.location='/auth'"> Авторизация </button>
+
         </form>
+        <div class="error" *ngIf="ermass">
+          <p> <fa-icon [icon]="faExclamationCircle"></fa-icon> {{ermass}}</p>
+        </div>
       </div>
     </div>
   </div>

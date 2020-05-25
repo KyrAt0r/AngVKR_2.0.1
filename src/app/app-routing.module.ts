@@ -7,22 +7,24 @@ import {MainPageComponent} from './main-page/main-page.component';
 import {LogoutComponent} from './logout/logout.component';
 import {AboutComponent} from './about/about.component';
 import {CreateEditComponent} from './create-edit/create-edit.component';
+import {AuthGuard} from './auth.guard';
 
 
 
 const routes: Routes = [
   {path: 'reg', component: RegComponent },
   {path: 'auth', component: AuthComponent},
-  {path: 'home', component: MainPageComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'create', component: CreateEditComponent},
+  {path: 'home', component: MainPageComponent, canActivate: [AuthGuard]},
+  {path: 'about', component: AboutComponent },
+  {path: 'create', component: CreateEditComponent, canActivate: [AuthGuard]},
+  {path: 'logout', component: LogoutComponent},
   {path: '', redirectTo: 'auth', pathMatch: 'full'},
-  {path: '**', component: MainPageComponent},
-  {path: 'logout', component: LogoutComponent}
+  {path: '**', component: AuthComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

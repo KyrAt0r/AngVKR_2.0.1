@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 import {AuthService} from '../auth.service';
 
@@ -12,6 +13,11 @@ import {AuthService} from '../auth.service';
   styleUrls: ['./reg.component.css']
 })
 export class RegComponent implements OnInit {
+
+  done: boolean = false;
+  ermass: string;
+
+  faExclamationCircle=faExclamationCircle;
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -25,17 +31,22 @@ export class RegComponent implements OnInit {
     const password = target.querySelector('#password').value;
     const password1 = target.querySelector('#cpassword').value;
 
-    // more validation
+    if (password !== password1) {
+      this.ermass = "Пароли не совпадают"
+    }else {
 
     if (errors.length === 0) {
       this.auth.registerUser(login, password).subscribe(data => {
         console.log(data);
-        if (data.success) {
-          this.router.navigate(['dashboard']);
+        if (data.responseInfo.status === 0) {
+          this.router.navigate(['auth']);
+        } else {
+          this.ermass = data.responseInfo.errorMessage;
         }
       });
     }
     console.log(login, password);
+  }
   }
 
 }

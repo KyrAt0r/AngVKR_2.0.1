@@ -16,7 +16,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   isLoggedIn(): Observable<isLoggedIn> {
-    return this.http.get<isLoggedIn>('/api/isloggedin.php')
+    return this.http.get<isLoggedIn>('http://saber011-001-site1.htempurl.com/api/Account/GetAllUsers')
   }
 
   logout() {
