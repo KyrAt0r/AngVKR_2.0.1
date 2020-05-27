@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import './sTable';
 
 @Component({
   selector: 'app-about',
@@ -10,6 +11,7 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

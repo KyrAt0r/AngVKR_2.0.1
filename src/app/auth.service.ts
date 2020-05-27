@@ -12,7 +12,6 @@ interface content {
   id: number;
 }
 
-
 interface responseInfo {
   errorCode: number;
   errorContextInfoId: number;
@@ -49,7 +48,8 @@ export class AuthService {
     return this.http.post<myData>('http://saber011-001-site1.htempurl.com/api/Account/login', {
       login,
       password
-    });
+      });
+    //return this.http.post<myData>('http://saber011-001-site1.htempurl.com/api/Account/login?Login = ' + login + '&' + 'Password = ' + password, {});
   }
 
   registerUser(login, password) {
