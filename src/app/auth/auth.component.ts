@@ -33,9 +33,6 @@ export class AuthComponent implements OnInit {
         this.router.navigate(['home']);
         console.log(data);
         this.Auth.setLoggedIn(true);
-        localStorage.setItem('user_token', Content.access_token);
-        localStorage.setItem('Id', String(data.responseInfo.status));
-
         this.done = true;
       } else {
         this.ermass = data.responseInfo.errorMessage;
