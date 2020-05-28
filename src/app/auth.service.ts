@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
 interface myData {
-  Content: content;
+  content: content;
   responseInfo: responseInfo;
 }
 
 interface content {
   access_token: string;
-  username: string;
   id: number;
+  username: string;
+
 }
 
 interface responseInfo {
@@ -49,7 +50,6 @@ export class AuthService {
       login,
       password
       });
-    //return this.http.post<myData>('http://saber011-001-site1.htempurl.com/api/Account/login?Login = ' + login + '&' + 'Password = ' + password, {});
   }
 
   registerUser(login, password) {

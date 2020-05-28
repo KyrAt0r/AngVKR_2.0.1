@@ -16,6 +16,7 @@ import {LogoutComponent} from './logout/logout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutComponent } from './about/about.component';
 import { CreateEditComponent } from './create-edit/create-edit.component';
+import { EditPasswordComponent } from './edit-password/edit-password.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CreateEditComponent } from './create-edit/create-edit.component';
     MainPageComponent,
     LogoutComponent,
     AboutComponent,
-    CreateEditComponent
+    CreateEditComponent,
+    EditPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -2,12 +2,32 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+interface EPstatus {
+  content: content;
+  responseInfo: responseInfo;
+}
+
+interface content {
+  messege: string;
+}
+
+interface responseInfo {
+  status: number;
+  errorCode: number;
+  errorMessage: string;
+  validationErrors: number;
+  errorContextInfoId: number;
+}
 
 interface isLoggedIn {
   status: boolean
 }
 
 interface logoutStatus {
+  success: boolean
+}
+
+interface EPstatus {
   success: boolean
 }
 @Injectable()
@@ -23,4 +43,7 @@ export class UserService {
     return this.http.get<logoutStatus>('http://saber011-001-site1.htempurl.com/api/Account/login')
   }
 
+  editPass(id, newPasswrod) {
+    return this.http.post<EPstatus>('http://saber011-001-site1.htempurl.com/api/Account/resertPassword', { id, newPasswrod });
+  }
 }
