@@ -1,0 +1,14 @@
+<div class="limiter" xmlns="http://www.w3.org/1999/html">
+  <div class="main">
+    <div class="content">
+      <div *ngIf="responsTeam">
+      <table  style="width: 100%; text-align: center">
+        <thead><tr><td>Название команды</td><td>Рейтинг команды</td></thead>
+        <tbody *ngFor="let contents of responsTeam.content">
+        <tr><td>{{contents.teamName}}</td><td>{{contents.teamRating}}</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>

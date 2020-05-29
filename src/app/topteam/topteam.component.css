@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,500i,700,700i&display=swap');
+
+root{
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h1{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 25px;
+  display: block;
+}
+
+p{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+}
+
+table{
+  font-family: 'Fira Sans', sans-serif;
+  margin: 50px;
+}
+
+span{
+  font-family: 'Fira Sans', sans-serif;
+  color: #3b3b3b;
+  margin: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 6px 15px;
+  width: 80px;
+  border-color: #61affe;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.limiter{
+  display: flex;
+  min-height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.main{
+  width: 100%;
+  margin-top: 90px;
+  margin-right: 90px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  padding: 30px;
+  background-color: #b9bbbe;
+  border-radius: 10px;
+  min-height: 100%;
+}
+
+.content{
+  min-height: 100%;
+  align-items: center;
+}
+
+.about{
+  font-size: 25px;
+  text-align: center;
+}
+
+
+.tables{
+
+}
+
+.bordertable{
+  border-collapse: collapse;
+  color: black;
+}
+
+.get{
+  font-family: 'Fira Sans', sans-serif;
+  color: #fff;
+  background: #61affe;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 15px;
+  width: 40px;
+  border-radius: 3px;
+  text-align: center;
+  box-sizing: inherit;
+}
+
+.post{
+  font-family: 'Fira Sans', sans-serif;
+  color: #fff;
+  background: #49cc90;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 15px;
+  width: 40px;
+  border-radius: 3px;
+  text-align: center;
+  box-sizing: inherit;
+}
+
+.tline{
+  border-style: solid ;
+  border-color: #61affe
+}

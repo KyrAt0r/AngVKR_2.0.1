@@ -36,14 +36,14 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   isLoggedIn(): Observable<isLoggedIn> {
-    return this.http.get<isLoggedIn>('http://saber011-001-site1.htempurl.com/api/Account/GetAllUsers')
+    return this.http.get<isLoggedIn>('http://saberzero11-001-site1.atempurl.com/api/Account/GetAllUsers')
   }
 
   logout() {
-    return this.http.get<logoutStatus>('http://saber011-001-site1.htempurl.com/api/Account/login')
+    return this.http.get<logoutStatus>('http://saberzero11-001-site1.atempurl.com/api/Account/login')
   }
 
   editPass(id, newPasswrod) {
-    return this.http.post<EPstatus>('http://saber011-001-site1.htempurl.com/api/Account/resertPassword', { id, newPasswrod });
+    return this.http.post<EPstatus>('http://saberzero11-001-site1.atempurl.com/api/Account/resertPassword', { id, newPasswrod });
   }
 }

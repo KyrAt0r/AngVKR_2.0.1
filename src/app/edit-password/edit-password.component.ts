@@ -25,9 +25,9 @@ export class EditPasswordComponent {
     const target = event.target;
     const login = localStorage.getItem('username');
     const login1 = target.querySelector('#login').value;
-    const newPasswrod = target.querySelector('#password').value;
+    const newPasswrod: string = target.querySelector('#password').value;
     const password1 = target.querySelector('#cpassword').value;
-    const id = localStorage.getItem('ID');
+    const id: number = Number(localStorage.getItem('ID'));
     if (login !== login1) {
       this.ermass = 'Логины не совпадают';
     } else {

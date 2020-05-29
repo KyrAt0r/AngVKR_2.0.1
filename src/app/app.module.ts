@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutComponent } from './about/about.component';
 import { CreateEditComponent } from './create-edit/create-edit.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
+import { TopteamComponent } from './topteam/topteam.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EditPasswordComponent } from './edit-password/edit-password.component';
     LogoutComponent,
     AboutComponent,
     CreateEditComponent,
-    EditPasswordComponent
+    EditPasswordComponent,
+    TopteamComponent
   ],
   imports: [
     BrowserModule,
