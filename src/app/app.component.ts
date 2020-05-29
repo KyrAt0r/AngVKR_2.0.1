@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faHome, faScroll, faBookDead, faSignOutAlt, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faScroll, faBookDead, faSignOutAlt, faDiceD20, faUser, faTrophy } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +13,8 @@ export class AppComponent {
   faBookDead = faBookDead;
   faSignOutAlt = faSignOutAlt;
   faDiceD20 = faDiceD20;
+  faUser = faUser;
+  faTrophy = faTrophy;
+
+  public UserName: string = localStorage.getItem('username');
 }

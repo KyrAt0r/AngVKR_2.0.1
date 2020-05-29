@@ -31,6 +31,15 @@
       </li>
 
       <li class="logo">
+        <a class="nav-link" href="/topteams">
+          <fa-icon [icon]="faTrophy"></fa-icon>
+          <span class="link-text logo-text">
+            Рейтинг команд
+          </span>
+        </a>
+      </li>
+
+      <li class="logo">
         <a class="nav-link" href="/about">
           <fa-icon [icon]="faBookDead"></fa-icon>
           <span class="link-text logo-text">
@@ -50,12 +59,16 @@
     </ul>
   </nav>
 </div>
+<div class="dropdown">
+  <button class="dropbtn"><fa-icon class="dropIcon" [icon]="faUser"></fa-icon></button>
+  <div class="dropdown-content">
+    <a href="/profil">{{UserName}}</a>
+    <a href="/editpass">Изменить пароль</a>
+  </div>
+</div>
 <main>
   <div class="content_color">
     <router-outlet></router-outlet>
   </div>
 </main>
 </body>
-
-
-
