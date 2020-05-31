@@ -39,12 +39,12 @@ export class CreateEditComponent implements OnInit {
 //      answerExercises: topics.answerExercises,
 //      levelExercises: topics.levelExercises,
     };
-    this.http.post('http://saber011-001-site1.htempurl.com/api/NewService/AddSubject', body)
+    this.http.post('http://saber011-001-site1.htempurl.com/api/NewService/AddTest?number=1', body)
       .subscribe(
         (data: Topics) => {
           this.receivedUser = data;
           this.done = true;
-          topics.nameSubject = '';
+          topics.nameTest = '';
         },
         error => console.log(error)
       );

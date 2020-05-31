@@ -1,0 +1,22 @@
+<p>create-team!</p>
+<div>
+  <div></div><input [(ngModel)]="topics.teamName">
+  <div></div><input [(ngModel)]="topics.capId">
+  <div></div><input (keyup.enter)="createTeam(topics)" [(ngModel)]="topics.coachId">
+
+  <!--  <div></div><input #postData (keyup.enter)="createSubject(topics)" [(ngModel)]="topics.nameSubject">-->
+  <button (click)="createTeam(topics)">Create</button>
+
+  <!--
+  <form *ngIf="responsSubjects">
+    <select name="users" size="10">
+      <option *ngFor="let contents of responsSubjects.content">
+        ID: {{contents.idSubject}}
+        User: {{contents.nameSubject}}
+      </option>
+    </select>
+  </form>
+-->
+</div>
+
+
