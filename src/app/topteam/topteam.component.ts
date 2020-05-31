@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../auth.service';
 import {Router} from '@angular/router';
 import {TeamsService} from '../teams.service';
+import { faTrophy } from '@fortawesome/free-solid-svg-icons';
+import './script';
+import './packed';
 
 @Component({
   selector: 'app-topteam',
@@ -10,6 +12,10 @@ import {TeamsService} from '../teams.service';
 })
 export class TopteamComponent implements OnInit {
 
+  faTrophy = faTrophy;
+
+  search: any;
+
   responsTeam: any;
   constructor(private Teams: TeamsService,
               private router: Router) { }
@@ -17,7 +23,6 @@ export class TopteamComponent implements OnInit {
   ngOnInit(): void {
     this.Teams.getTeams().subscribe((respons) => {
       this.responsTeam = respons;
-      console.log(this.responsTeam);
     })
   }
 

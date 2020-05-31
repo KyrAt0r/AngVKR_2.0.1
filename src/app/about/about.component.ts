@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faCrutch } from '@fortawesome/free-solid-svg-icons';
 import './sTable';
 
 @Component({
@@ -7,7 +8,7 @@ import './sTable';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  faCrutch = faCrutch;
   constructor() { }
 
   ngOnInit(): void {

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegComponent } from './reg/reg.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './auth/auth.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -18,6 +18,10 @@ import { AboutComponent } from './about/about.component';
 import { CreateEditComponent } from './create-edit/create-edit.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { TopteamComponent } from './topteam/topteam.component';
+import {TestComponent} from './test/test.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -29,14 +33,22 @@ import { TopteamComponent } from './topteam/topteam.component';
     AboutComponent,
     CreateEditComponent,
     EditPasswordComponent,
-    TopteamComponent
+    TopteamComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MatTabsModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   providers: [
     AuthService,
