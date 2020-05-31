@@ -10,6 +10,7 @@ import {CreateEditComponent} from './create-edit/create-edit.component';
 import {AuthGuard} from './auth.guard';
 import {EditPasswordComponent} from './edit-password/edit-password.component';
 import {TopteamComponent} from './topteam/topteam.component';
+import {TestComponent} from './test/test.component';
 
 
 
@@ -20,8 +21,9 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent },
   {path: 'create', component: CreateEditComponent, canActivate: [AuthGuard]},
   {path: 'editpass', component: EditPasswordComponent, canActivate: [AuthGuard]},
-  {path: 'topteams', component: TopteamComponent, canActivate: [AuthGuard]},
+  {path: 'topteams', component: TopteamComponent},//, canActivate: [AuthGuard]},
   {path: 'logout', component: LogoutComponent},
+  {path: 'test', component: TestComponent},
   {path: '', redirectTo: 'auth', pathMatch: 'full'},
   {path: '**', component: AuthComponent, canActivate: [AuthGuard]}
 ];
