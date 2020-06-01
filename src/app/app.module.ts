@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,12 +17,15 @@ import {LogoutComponent} from './logout/logout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutComponent } from './about/about.component';
 import { CreateEditComponent } from './create-edit/create-edit.component';
+import { CreateSubjectComponent } from './create-subject/create-subject.component';
+import { CreateTeamComponent } from './create-team/create-team.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { TopteamComponent } from './topteam/topteam.component';
 import {TestComponent} from './test/test.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
+
 
 @NgModule({
   declarations: [
@@ -32,9 +36,12 @@ import {MatTabsModule} from '@angular/material/tabs';
     LogoutComponent,
     AboutComponent,
     CreateEditComponent,
+    CreateSubjectComponent,
+    CreateTeamComponent
     EditPasswordComponent,
     TopteamComponent,
     TestComponent
+
   ],
   imports: [
     BrowserModule,
@@ -49,6 +56,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatTabsModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+
   ],
   providers: [
     AuthService,
