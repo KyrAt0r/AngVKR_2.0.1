@@ -32,8 +32,8 @@ export class RegComponent implements OnInit {
     const password1 = target.querySelector('#cpassword').value;
 
     if (password !== password1) {
-      this.ermass = "Пароли не совпадают"
-    }else {
+      this.ermass = 'Пароли не совпадают';
+    } else {
 
     if (errors.length === 0) {
       this.auth.registerUser(login, password).subscribe(data => {

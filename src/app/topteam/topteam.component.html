@@ -1,0 +1,41 @@
+<div class="limiter" xmlns="http://www.w3.org/1999/html">
+  <div class="main">
+    <div class="content">
+      <div class="inputs">
+        <input [(ngModel)]="search">
+      </div>
+      <div *ngIf="responsTeam">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Название команды</th>
+              <th>Рейтинг команды</th>
+            </tr>
+          </thead>
+            <tbody *ngFor="let contents of responsTeam.content">
+              <tr>
+                <td><fa-icon style="color: #ffd700" [icon]="faTrophy"></fa-icon></td>
+                <td>{{contents.teamName}}</td>
+                <td>{{contents.teamRating}}</td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var sorter = new TINY.table.sorter("sorter");
+  sorter.head = "head";
+  sorter.asc = "asc";
+  sorter.desc = "desc";
+  sorter.even = "evenrow";
+  sorter.odd = "oddrow";
+  sorter.evensel = "evenselected";
+  sorter.oddsel = "oddselected";
+  sorter.paginate = true;
+  sorter.currentid = "currentpage";
+  sorter.limitid = "pagelimit";
+  sorter.init("table",1);
+</script>

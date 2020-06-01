@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { User } from './user';
-import { HttpClient } from '@angular/common/http';
-import { faHome, faScroll, faBookDead, faSignOutAlt, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faScroll, faBookDead, faSignOutAlt, faDiceD20, faUser, faTrophy } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -15,33 +13,8 @@ export class AppComponent {
   faBookDead = faBookDead;
   faSignOutAlt = faSignOutAlt;
   faDiceD20 = faDiceD20;
+  faUser = faUser;
+  faTrophy = faTrophy;
 
-  //user: User = new User();
-  //receivedUser: User;
-  //done: boolean = false;
-  //respons: any;
-//
-//
-  //constructor(private http: HttpClient) { }
-//
-  //submit(user: User) {
-  //  const body = {login: user.login, password: user.password};
-  //  alert (user.login);
-  //  this.http.post('http://saber011-001-site1.htempurl.com/api/Account/register', body)
-  //    .subscribe(
-  //      (data: User) => {
-  //        this.receivedUser = data;
-  //        this.done = true;
-  //      },
-  //      error => console.log(error)
-  //    );
-  //}
-
-  //search() {
-  //  this.http.get('http://saber011-001-site1.htempurl.com/api/Account/GetUserById/' + this.user)
-  //    .subscribe((respons) => {
-  //      this.respons = respons;
-  //      console.log(this.respons);
-  //    });
-  //}
+  public UserName: string = localStorage.getItem('username');
 }

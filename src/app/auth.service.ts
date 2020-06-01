@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
 interface myData {
-  Content: content;
+  content: content;
   responseInfo: responseInfo;
 }
 
 interface content {
   access_token: string;
-  username: string;
   id: number;
-}
+  username: string;
 
+}
 
 interface responseInfo {
   errorCode: number;
@@ -46,14 +46,14 @@ export class AuthService {
   getUserDetails(login, password) {
     // post these details to API server return user info if correct
 
-    return this.http.post<myData>('http://saber011-001-site1.htempurl.com/api/Account/login', {
+    return this.http.post<myData>('http://saberzero11-001-site1.atempurl.com/api/Account/login', {
       login,
       password
-    });
+      });
   }
 
   registerUser(login, password) {
-    return this.http.post<registerResponse>('http://saber011-001-site1.htempurl.com/api/Account/register', {
+    return this.http.post<registerResponse>('http://saberzero11-001-site1.atempurl.com/api/Account/register', {
       login,
       password
     });

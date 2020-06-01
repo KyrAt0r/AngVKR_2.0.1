@@ -1,1 +1,80 @@
-<h1>О нас</h1>
+
+<div class="limiter" xmlns="http://www.w3.org/1999/html">
+  <div class="main">
+    <div class="content">
+      <div class="about"><h1>О нас</h1></div>
+      <div class="text">
+        <p>Мы команда разработчиков из колледжа профессионального образования ПГНИУ.</p>
+        <p>Данный портал олимпиадного программирования был разработан для улучшения уровня навыков людей, которые хотят заниматься олимпиадным программированием.</p>
+        <p>Разработка была выполнена в рамках выполнения ВКР.</p>
+        <p>В качестве програмных решений были использованы:</p>
+        <ul>
+          <li><p><a href="https://docs.microsoft.com/ru-ru/aspnet/core/?view=aspnetcore-3.1">ASP .NET Core</a> в кчестве BACK-End части</p></li>
+          <li><p>FRONT-End на <a href="https://angular.io/">ANGULAR</a></p></li>
+          <li><p><a href="https://github.com/Saber011/VKR">GitHub Front</a></p></li>
+          <li><p><a href="https://github.com/KyrAt0r/AngVKR_2.0.1">GitHub Back</a></p></li>
+        </ul>
+      </div>
+
+      <div><p>Методы которые используются на нашем портале</p>
+        <div class="tables">
+
+          <mat-tab-group>
+            <mat-tab label="x"></mat-tab>
+            <mat-tab label="Account"><table>
+            <tr><td><div class="get">GET</div></td><TD><b>/api​/Account​/GetUserById</b> Получить пользователя</TD></tr>
+            <tr><td><div class="get">GET</div></td><TD><b>/api/Account/GetUserByLogin</b> Получить пользователя по логину</TD></tr>
+            <tr><td><div class="get">GET</div></td><TD><b>​/api​/Account​/GetAllUsers</b> Получить всех пользвателей</TD></tr>
+            <tr><td><div class="post">POST</div></td><TD><b>/api​/Account​/DeleteUser</b> Удалить пользвателя</TD></tr>
+            <tr><td><div class="post">POST</div></td><TD><b>/api​/Account​/login</b> Авторизация пользователя</TD></tr>
+            <tr><td><div class="post">POST</div></td><TD><b>/api​/Account​/register</b> Регистрация пользователя</TD></tr>
+            <tr><td><div class="post">POST</div></td><TD><b>/api​/Account​/resertPassword</b> Изменить пароль пользователя</TD></tr>
+          </table>
+          </mat-tab>
+            <mat-tab label="Context"> <table>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api​/Context​/GetContexts</b> Получить все задачи</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​/api​/Context​/GetTopics</b> Получить темы</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​/api​/Context​/Create</b> Создать задачу</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>/api​/Context​/Edit</b> Редактировать задачу</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>/api/Context/delete</b> Удалить задачу</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​/api/Context/answer</b> Проверить ответ на задачу</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>/api/Context/allIssuesAcategory</b> Получить все задачи по категории</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api​/Context​/getTaskById</b> Получить задачу по id</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api​/Context​/getNextTask</b> Получить следующую задачу</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​​/api​/Context​/ScipTask</b> Пропустить задачу</TD></tr>
+            </table> </mat-tab>
+            <mat-tab label="NewService"> <table>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/AddTest</b> Добавить тест</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/Start</b> Начать изучение</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/AddSubject</b> Добавить новый предмет</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/AddTask</b> Добавить новую задачу</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/Answer</b> Проверить решение задачи</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api/NewService/GetSubjects</b> Получить все предметы</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api/NewService/GetSubject</b> Получить предмет по id</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/DeleteSubject</b> Удалить предмет</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/EditSubject</b> Изменить информацию о предмете</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api/NewService/GetTests</b> Получить все тесты</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api/NewService/GetTest</b> Получить тест по id</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/DeleteTest</b> Удалить тест</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/EditTest</b> Изменить информацию о тесте</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api/NewService/GetExercisess</b> Получить все задачи</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>​​/api/NewService/GetExercises</b> Получить задачу по id</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/DeleteExercises</b> Удалить задачу</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/EditExercises</b> Изменить информацию о задаче</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/GetHierarchySubjectsUsers</b> Иерархия</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>​​/api/NewService/GetHierarchySubjectsUsers</b> Иерархия пользователя</TD></tr>
+            </table> </mat-tab>
+            <mat-tab label="Teams"><table>
+              <tr><td><div class="get">GET</div></td><TD><b>/api/teams/GetTeams</b> Получить все команды</TD></tr>
+              <tr><td><div class="get">GET</div></td><TD><b>/api/teams/GetTeam</b> Получить команду по ее id</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>/api/teams/DeleteTeams</b> Удалить команду</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>/api/teams/AddTeams</b> Добавить команду</TD></tr>
+              <tr><td><div class="post">POST</div></td><TD><b>/api/teams/EditTeams</b> Изменить информацию о команде</TD></tr>
+            </table></mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

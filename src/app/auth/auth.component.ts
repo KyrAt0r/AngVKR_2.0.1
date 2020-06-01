@@ -33,14 +33,15 @@ export class AuthComponent implements OnInit {
         this.router.navigate(['home']);
         console.log(data);
         this.Auth.setLoggedIn(true);
-        localStorage.setItem('Id', String(data.responseInfo.status));
-
+        localStorage.setItem('ID', String(data.content.id));
+        localStorage.setItem('access_token', data.content.access_token);
+        localStorage.setItem('username', data.content.username);
         this.done = true;
       } else {
         this.ermass = data.responseInfo.errorMessage;
       }
       console.log(login , password);
 
-    })
+    });
   }
 }
