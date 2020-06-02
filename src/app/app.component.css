@@ -41,6 +41,10 @@ main {
   height: 100%;
 }
 
+table{
+  display: table ;
+}
+
 .content_color{
   background-color: #2F3136;
   color: black;

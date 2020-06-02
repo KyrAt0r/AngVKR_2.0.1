@@ -17,6 +17,7 @@ p{
 }
 
 table{
+  display: table !important;
   font-family: 'Fira Sans', sans-serif;
   margin: 50px;
 }

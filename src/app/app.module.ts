@@ -21,7 +21,8 @@ import { TopteamComponent } from './topteam/topteam.component';
 import {TestComponent} from './test/test.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatNativeDateModule} from '@angular/material/core';
-import {MatTabsModule} from '@angular/material/tabs';
+import { UserComponent } from './user/user.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     CreateEditComponent,
     EditPasswordComponent,
     TopteamComponent,
-    TestComponent
+    TestComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -42,11 +44,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
-    BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    MatTabsModule,
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
