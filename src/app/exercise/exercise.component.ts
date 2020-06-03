@@ -4,9 +4,9 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 import {TaskService} from '../task.service';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css'],
+  selector: 'app-exercise',
+  templateUrl: './exercise.component.html',
+  styleUrls: ['./exercise.component.css'],
   animations: [
     trigger('animationTriggerName', [
       transition('void => *', [
@@ -19,7 +19,7 @@ import {TaskService} from '../task.service';
     ])
   ]
 })
-export class MainPageComponent implements OnInit {
+export class ExerciseComponent implements OnInit {
 
   constructor(private http: HttpClient,
               private Subject: TaskService) { }
@@ -61,5 +61,42 @@ export class MainPageComponent implements OnInit {
     this.Subject.getExercises().subscribe((respons) => {
       this.responsExercises = respons;
     });
+  }
+  // add
+  createSubject(event) {
+    event.preventDefault();
+    const target = event.target;
+    const idSubject = 0;
+    const nameSubject = target.querySelector('#nameSubject').value;
+    this.Subject.postSubjects(idSubject, nameSubject).subscribe( data => {
+      console.log(data);
+    });
+  }
+  createTest(event) {
+    event.preventDefault();
+    const target = event.target;
+    const idTest = 0;
+    const idSubject = Number(target.querySelector('#idSubject').value);
+    const nameTest = target.querySelector('#nameTest').value;
+    this.Subject.postTests(idTest, idSubject, nameTest).subscribe( data => {
+      console.log(data);
+    });
+  }
+  createExercises(event) {
+    event.preventDefault();
+    const target = event.target;
+    const idExercises = 0;
+    const idTest = Number(target.querySelector('#idTest').value);
+    const nameExercises = target.querySelector('#nameExercises').value;
+    const textExercises = target.querySelector('#textExercises').value;
+    const answerExercises = target.querySelector('#answerExercises').value;
+    const levelExercises = Number(target.querySelector('#levelExercises').value);
+    this.Subject.postExercises(idExercises, idTest, nameExercises, textExercises, answerExercises, levelExercises).subscribe( data => {
+      console.log(data);
+    });
+  }
+
+  deliteExercises(idExercises) {
+
   }
 }

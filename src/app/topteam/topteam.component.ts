@@ -23,7 +23,7 @@ export class TopteamComponent implements OnInit {
   ngOnInit(): void {
     this.Teams.getTeams().subscribe((respons) => {
       this.responsTeam = respons;
-    })
+    });
   }
 
 }

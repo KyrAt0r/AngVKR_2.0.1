@@ -22,9 +22,9 @@ import { CreateTeamComponent } from './create-team/create-team.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { TopteamComponent } from './topteam/topteam.component';
 import {TestComponent} from './test/test.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
+import { ExerciseComponent } from './exercise/exercise.component';
 
 
 @NgModule({
@@ -37,10 +37,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     AboutComponent,
     CreateEditComponent,
     CreateSubjectComponent,
-    CreateTeamComponent
+    CreateTeamComponent,
     EditPasswordComponent,
     TopteamComponent,
-    TestComponent
+    TestComponent,
+    ExerciseComponent
 
   ],
   imports: [

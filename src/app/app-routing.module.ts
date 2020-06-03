@@ -13,6 +13,7 @@ import {AuthGuard} from './auth.guard';
 import {EditPasswordComponent} from './edit-password/edit-password.component';
 import {TopteamComponent} from './topteam/topteam.component';
 import {TestComponent} from './test/test.component';
+import {ExerciseComponent} from './exercise/exercise.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'reg', component: RegComponent },
   {path: 'auth', component: AuthComponent},
   {path: 'home', component: MainPageComponent, canActivate: [AuthGuard]},
+  {path: 'exercise', component: ExerciseComponent, canActivate: [AuthGuard]},
   {path: 'about', component: AboutComponent },
   {path: 'create-test', component: CreateEditComponent, canActivate: [AuthGuard]},
   {path: 'create-subject', component: CreateSubjectComponent, canActivate: [AuthGuard]},
