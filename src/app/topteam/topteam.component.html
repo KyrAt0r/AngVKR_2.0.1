@@ -7,19 +7,19 @@
       <div *ngIf="responsTeam">
         <table id="table">
           <thead>
-            <tr>
-              <th>#</th>
-              <th>Название команды</th>
-              <th>Рейтинг команды</th>
-            </tr>
+          <tr>
+            <th>#</th>
+            <th>Название команды</th>
+            <th>Рейтинг команды</th>
+          </tr>
           </thead>
-            <tbody *ngFor="let contents of responsTeam.content">
-              <tr>
-                <td><fa-icon style="color: #ffd700" [icon]="faTrophy"></fa-icon></td>
-                <td>{{contents.teamName}}</td>
-                <td>{{contents.teamRating}}</td>
-              </tr>
-            </tbody>
+          <tbody *ngFor="let contents of responsTeam.content">
+          <tr>
+            <td><fa-icon style="color: #ffd700" [icon]="faTrophy"></fa-icon></td>
+            <td>{{contents.teamName}}</td>
+            <td>{{contents.teamRating}}</td>
+          </tr>
+          </tbody>
         </table>
       </div>
     </div>
