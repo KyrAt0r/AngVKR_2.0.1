@@ -12,7 +12,6 @@ import {CreateTeamComponent} from './create-team/create-team.component';
 import {AuthGuard} from './auth.guard';
 import {EditPasswordComponent} from './edit-password/edit-password.component';
 import {TopteamComponent} from './topteam/topteam.component';
-import {TestComponent} from './test/test.component';
 import {ExerciseComponent} from './exercise/exercise.component';
 import {UserComponent} from './user/user.component';
 
