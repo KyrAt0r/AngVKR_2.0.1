@@ -1,0 +1,125 @@
+<div class="limiter" xmlns="http://www.w3.org/1999/html">
+  <div class="main">
+    <div class="content">
+      <!-- Всплывающее окно -->
+      <div [@animationTriggerName]="stateSubjects" *ngIf="conditionSubjects">
+        <div class="backgraundWindow" (click)="createSubjects()"></div>
+        <div class="contentWindow">
+          <div class="name_window">
+            Создание предмета
+          </div>
+          <form (submit)="createSubject($event)">
+            <div class="text_window">
+              <input placeholder="Название предмета" id="nameSubject">
+            </div>
+            <div class="button_window">
+              <button class="button_content" type="submit">Создать предмет</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div [@animationTriggerName]="stateTest" *ngIf="conditionTest">
+        <div class="backgraundWindow" (click)="createTests()"></div>
+        <div class="contentWindow">
+          <div class="name_window">
+            Создание теста
+          </div>
+          <form (submit)="createTest($event)">
+            <div class="text_window">
+              <select *ngIf="responsSubjects" id="idSubject" class="select">
+                <option>Выберите предмет</option>
+                <option *ngFor="let contents of responsSubjects.content" value="{{contents.idSubject}}" class="option">
+                  ID:{{contents.idSubject}} {{contents.nameSubject}}
+                </option>
+              </select>
+              <input placeholder=" Название теста" id="nameTest">
+            </div>
+            <div class="button_window">
+              <button class="button_content" type="submit">Создать тест</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div [@animationTriggerName]="stateExercises" *ngIf="conditionExercises">
+        <div class="backgraundWindow" (click)="createExercisess()"></div>
+        <div class="contentWindow">
+          <div class="name_window">
+            Создание задачи
+          </div>
+          <form (submit)="createExercises($event)">
+            <select *ngIf="responsTest" id="idTest" class="select">
+              <option>Выберите тест</option>
+              <option *ngFor="let contents of responsTest.content" value="{{contents.idTest}}" class="option">
+                ID:{{contents.idTest}} {{contents.nameTest}}
+              </option>
+            </select>
+            <p>
+              <input placeholder=" Название Задачи" id="nameExercises">
+              <input placeholder=" Текст Задачи" id="textExercises">
+              <input placeholder=" Решение Задачи" id="answerExercises"></p>
+            <p style="text-align: right">
+              <input class="input_lvl" placeholder="Уровень" id="levelExercises">
+            </p>
+            <div class="button_window">
+              <button class="button_content" type="submit">Создать задачу</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Контент -->
+      <div *ngIf="responsExercises">
+        <div class="content_buttoms">
+          <div style="text-align: right">
+            <select *ngIf="responsSubjects"  name="users">
+              <option>Предмет</option>
+              <option *ngFor="let contents of responsSubjects.content">
+                ID:{{contents.idSubject}} | {{contents.nameSubject}}
+              </option>
+            </select>
+            <select *ngIf="responsTest" name="users">
+              <option>Тест</option>
+              <option *ngFor="let contents of responsTest.content">
+                ID:{{contents.idTest}} | {{contents.nameTest}}
+              </option>
+            </select>
+            <select *ngIf="responsExercises" name="users">
+              <option>Задание</option>
+              <option *ngFor="let contents of responsExercises.content">
+                {{contents.nameExercises}}
+              </option>
+            </select>
+          </div>
+          <p style="text-align: right;">
+            <button class="button" (click)="createSubjects()">Create-Subject</button>
+            <button class="button" (click)="createTests()">Create-Test</button>
+            <button class="button" (click)="createExercisess()">Create-Exercises</button>
+          </p>
+        </div>
+
+        <form *ngFor="let contents of responsExercises.content">
+          <div class="item_content">
+            <div class="item_information" id="item_{{contents.idExercises}}">
+              <h3 class="item_text name_task">
+                NameTask: {{contents.nameExercises}}
+              </h3>
+              <p class="item_text text_task">
+                TextTask: {{contents.textExercises}}
+              </p>
+              <p class="item_text lvl_task">
+                Lvl: {{contents.levelExercises}}
+              </p>
+            </div>
+            <div class="item_button">
+              <button class="button_content" >Solve</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
