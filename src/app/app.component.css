@@ -131,6 +131,12 @@ table{
   transition: 1s;
 }
 
+
+.navbar:hover .logo .svg {
+  transform: rotate(-360deg);
+  transition: 1s;
+}
+
 .svg{
   transition: 1s;
 }

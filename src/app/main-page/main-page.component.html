@@ -1,27 +1,52 @@
-<h2>Главная</h2>
-<div *ngIf="responsContext">
-  <div *ngFor="let contents of responsContext.content">
-    TextTask: {{contents.textTask}}
-    <div>
-      Level: {{contents.level}}
-      AnswerTask: {{contents.answerTask}}
+<!-- Всплывающее окно -->
+<div [@animationTriggerName]="state" *ngIf="condition">
+  <div class="backgraundWindow" (click)="createTest()"></div>
+  <div class="contentWindow">
+    <div></div><input (keyup.enter)="createSubjects(topics)" [(ngModel)]="topics.nameSubject">
+    <button (click)="createSubjects(topics)">Create</button>
+  </div>
+</div>
+
+<!-- Контент -->
+<div class="block_content" *ngIf="responsContext">
+  <div class="content_buttoms">
+    <p style="text-align: right;">
+      <button class="button" (click)="createTest()">Create-test</button>
+      <button class="button" (click)="createTest()">Create-subject</button>
+      <button class="button" (click)="createTest()">Create-team</button>
+    </p>
+  </div>
+
+  <div class="top">
+    <div *ngIf="responsUsers">
+      <select name="users" size="10" style="width: 100%">
+        <option *ngFor="let contents of responsUsers.content">
+          ID: {{contents.id}}
+          User: {{contents.login}}
+        </option>
+      </select>
+    </div>
+
+    <div *ngIf="responsTeams">
+      <select name="users" size="10" style="width: 100%">
+        <option *ngFor="let contents of responsTeams.content">
+          ID: {{contents.idTeam}}
+          TeamName: {{contents.teamName}}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngFor="let contents of responsContext.content" class="content">
+    <div class="item_content">
+      <div class="item_information">
+        TextTask: {{contents.textTask}}
+      </div>
+      <div class="item_buttom">
+        Level: {{contents.level}}
+        AnswerTask: {{contents.answerTask}}
+        <button class="button_solve">Solve</button>
+      </div>
     </div>
   </div>
 </div>
-<form *ngIf="responsUsers">
-  <select name="users" size="10">
-    <option *ngFor="let contents of responsUsers.content">
-      ID: {{contents.id}}
-      User: {{contents.login}}
-    </option>
-  </select>
-</form>
-
-<form *ngIf="responsTeams">
-  <select name="users" size="10">
-    <option *ngFor="let contents of responsTeams.content">
-      ID: {{contents.idTeam}}
-      TeamName: {{contents.teamName}}
-    </option>
-  </select>
-</form>

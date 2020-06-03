@@ -9,4 +9,10 @@ export class Topics {
 
   idSubject: number;
   nameSubject: string;
+
+  idTeam: number;
+  teamName: string;
+  capId: number;
+  coachId: number;
+  teamRating: number;
 }
