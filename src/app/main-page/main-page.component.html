@@ -1,34 +1,7 @@
 <div class="limiter" xmlns="http://www.w3.org/1999/html">
   <div class="main">
     <div class="content">
-      <!-- Всплывающее окно -->
-
-      <!-- Контент -->
-      <div *ngIf="responsExercises">
-        <div class="content_buttoms">
-        </div>
-
-        <form *ngFor="let contents of responsExercises.content">
-          <div class="item_content">
-            <div class="item_information" id="item_{{contents.idExercises}}">
-              <h3 class="item_text name_task">
-                NameTask: {{contents.nameExercises}}
-              </h3>
-              <p class="item_text text_task">
-                TextTask: {{contents.textExercises}}
-              </p>
-              <p class="item_text lvl_task">
-                Lvl: {{contents.levelExercises}}
-              </p>
-            </div>
-            <div class="item_button">
-              <button class="button_content" >Solve</button>
-            </div>
-          </div>
-        </form>
-
-      </div>
-
+      <h1 style="text-align: center"><fa-icon class="svg" [icon]="faDiceD20"></fa-icon>  Добро пожаловать на COTA-Portal   <fa-icon class="svg" [icon]="faDiceD20"></fa-icon></h1>
     </div>
   </div>
 </div>

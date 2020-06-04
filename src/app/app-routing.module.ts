@@ -14,13 +14,15 @@ import {EditPasswordComponent} from './edit-password/edit-password.component';
 import {TopteamComponent} from './topteam/topteam.component';
 import {ExerciseComponent} from './exercise/exercise.component';
 import {UserComponent} from './user/user.component';
+import {ExpidComponent} from './expid/expid.component';
 
 const routes: Routes = [
   {path: 'reg', component: RegComponent },
   {path: 'auth', component: AuthComponent},
   {path: 'home', component: MainPageComponent, canActivate: [AuthGuard]},
   {path: 'exercise', component: ExerciseComponent, canActivate: [AuthGuard]},
-  {path: 'about', component: AboutComponent },
+  {path: 'exercise/:id', component: ExpidComponent, canActivate: [AuthGuard]},
+  {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},
   {path: 'create-test', component: CreateEditComponent, canActivate: [AuthGuard]},
   {path: 'create-subject', component: CreateSubjectComponent, canActivate: [AuthGuard]},
   {path: 'create-team', component: CreateTeamComponent, canActivate: [AuthGuard]},

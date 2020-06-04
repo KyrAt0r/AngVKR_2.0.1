@@ -5,37 +5,33 @@
         <input [(ngModel)]="search">
       </div>
       <div *ngIf="responsTeam">
-        <table id="table">
-          <thead>
+        <table class="tableT">
+          <thead class="napper">
           <tr>
-            <th>#</th>
+            <th>Позиций</th>
+            <th></th>
             <th>Название команды</th>
             <th>Рейтинг команды</th>
           </tr>
           </thead>
-          <tbody *ngFor="let contents of responsTeam.content">
+          <tbody *ngFor="let contents of responsTeam.content; let i = index">
           <tr>
-            <td><fa-icon style="color: #ffd700" [icon]="faTrophy"></fa-icon></td>
+            <td style="text-align: center;">#{{i+1}}</td>
+            <td style="text-align: center;">
+              <div *ngIf="i==0; then thenBlock; else elseBlock"></div>
+              <div *ngIf="i==1; then thenBlock1; else elseBlock"></div>
+              <div *ngIf="i==2; then thenBlock2; else elseBlock"></div>
+            </td>
             <td>{{contents.teamName}}</td>
-            <td>{{contents.teamRating}}</td>
+            <td><div style="text-align: center;">{{contents.teamRating}}</div></td>
           </tr>
+          <ng-template #thenBlock><fa-icon style="color: gold; " [icon]="faTrophy"></fa-icon></ng-template>
+          <ng-template #thenBlock1><fa-icon style="color: silver" [icon]="faTrophy"></fa-icon></ng-template>
+          <ng-template #thenBlock2><fa-icon style="color: #ad6416" [icon]="faTrophy"></fa-icon></ng-template>
+          <ng-template #elseBlock></ng-template>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
-<script type="text/javascript">
-  var sorter = new TINY.table.sorter("sorter");
-  sorter.head = "head";
-  sorter.asc = "asc";
-  sorter.desc = "desc";
-  sorter.even = "evenrow";
-  sorter.odd = "oddrow";
-  sorter.evensel = "evenselected";
-  sorter.oddsel = "oddselected";
-  sorter.paginate = true;
-  sorter.currentid = "currentpage";
-  sorter.limitid = "pagelimit";
-  sorter.init("table",1);
-</script>

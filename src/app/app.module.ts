@@ -26,6 +26,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { TestComponent } from './test/test.component';
 import { UserComponent } from './user/user.component';
+import { ExpidComponent } from './expid/expid.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { UserComponent } from './user/user.component';
     TopteamComponent,
     TestComponent,
     ExerciseComponent,
+    ExpidComponent,
     UserComponent
   ],
   imports: [

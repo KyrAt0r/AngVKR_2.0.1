@@ -103,7 +103,7 @@
           <div class="item_content">
             <div class="item_information" id="item_{{contents.idExercises}}">
               <h3 class="item_text name_task">
-                NameTask: {{contents.nameExercises}}
+                Название задачи: {{contents.nameExercises}}
               </h3>
               <p class="item_text text_task">
                 TextTask: {{contents.textExercises}}
@@ -113,7 +113,7 @@
               </p>
             </div>
             <div class="item_button">
-              <button class="button_content" >Solve</button>
+              <button class="button_content" [routerLink] ="contents.idExercises">Решать</button>
             </div>
           </div>
         </form>

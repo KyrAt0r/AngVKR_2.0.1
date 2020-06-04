@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {TaskService} from '../task.service';
+import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-main-page',
@@ -20,6 +21,9 @@ import {TaskService} from '../task.service';
   ]
 })
 export class MainPageComponent implements OnInit {
+
+
+  faDiceD20 = faDiceD20;
 
   constructor(private http: HttpClient,
               private Subject: TaskService) { }
