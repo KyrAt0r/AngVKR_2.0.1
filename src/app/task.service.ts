@@ -100,4 +100,8 @@ export class TaskService {
   detiteExercises(idExercises) {
     return this.http.post<contentExercises>('http://saberzero11-001-site1.atempurl.com//api/NewService/DeleteExercises)', idExercises);
   }
+
+  getTaskText(id) {
+    return this.http.get(`http://saberzero11-001-site1.atempurl.com/api/NewService/GetExercises?id=` + id);
+  }
 }

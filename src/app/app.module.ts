@@ -22,12 +22,11 @@ import { CreateSubjectComponent } from './create-subject/create-subject.componen
 import { CreateTeamComponent } from './create-team/create-team.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { TopteamComponent } from './topteam/topteam.component';
-import {TestComponent} from './test/test.component';
-import {MatNativeDateModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { TestComponent } from './test/test.component';
 import { UserComponent } from './user/user.component';
+import { ExpidComponent } from './expid/expid.component';
 
 
 @NgModule({
@@ -45,6 +44,7 @@ import { UserComponent } from './user/user.component';
     TopteamComponent,
     TestComponent,
     ExerciseComponent,
+    ExpidComponent,
     UserComponent
   ],
   imports: [
@@ -55,8 +55,8 @@ import { UserComponent } from './user/user.component';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
-
+    MatTabsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthService,

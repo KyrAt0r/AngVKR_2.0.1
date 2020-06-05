@@ -1,5 +1,7 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,500i,700,700i&display=swap');
+
 
 root{
   font-family: 'Fira Sans', sans-serif;
@@ -10,10 +12,14 @@ h1{
   font-size: 25px;
   display: block;
 }
-
 p{
   font-family: 'Fira Sans', sans-serif;
-  font-size: 18px;
+  margin: 0;
+}
+
+table{
+  font-family: 'Fira Sans', sans-serif;
+  margin: 50px;
 }
 
 span{
@@ -30,35 +36,14 @@ span{
   text-align: center;
 }
 
-table {
-  border-collapse: collapse;
-  border-radius: 10px;
-  margin: 25px;
-  padding: 5px;
-  font-family: 'Fira Sans', sans-serif;
-  background: #b9bbbe;
-  border: 2px solid #b9bbbe;
-  width: 45%;
-}
-
-th {
-  padding: 10px;
-}
-td {
-  border-bottom: 1px solid #bfbfbf;
-  padding: 10px;
-  background: #8e8f95;
-}
-
 a{
   text-decoration: none;
   color: black;
 }
-
-.napper{
-  border-radius: 10px;
-  text-align: center;
-  background: #818287;
+textarea{
+  margin: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .limiter{
@@ -80,7 +65,6 @@ a{
   background-color: #b9bbbe;
   border-radius: 10px;
   min-height: 100%;
-  height: 75vh;
 }
 
 .content{
@@ -88,14 +72,76 @@ a{
   align-items: center;
 }
 
-.about{
-  font-size: 25px;
-  text-align: center;
+.texts{
+  width: 38%;
+  background: #e3e3e3;
+  float: left;
 }
 
-.bordertable{
-  border-collapse: collapse;
-  color: black;
+.compil{
+  width: 60%;
+  background: #E8E8E8;
+  float: right;
+}
+
+.labelTask{
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+  justify-content: center;
+  background: #C4C4C4;
+  margin: 20px 15px 8px 15px;
+  border-radius: 10px;
+  height: 30px;
+}
+.labelTask h2{
+  justify-items: center;
+  padding: 2px;
+}
+
+.levelF{
+  position: relative;
+  float: right;
+  margin:0 15px 5px 15px;
+  background: #C4C4C4;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 10px;
+  height: 25px;
+  width: 100px;
+}
+.levelF p{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.textarea{
+  font-family: 'Fira Sans', sans-serif;
+  text-align: left;
+  font-size: 17px;
+  background: #fff;
+  margin: 41px 15px 20px 15px;
+  padding: 5px;
+  border-radius: 10px;
+  height: 68vh;
+  display: flex;
+  overflow: auto;
+}
+
+.texts, .compil{
+  height: 80vh;
+  border-radius: 10px;
+}
+
+#code {
+  width: 100%;
+  float:left;
+  min-height:100px;
+  overflow: hidden;
 }
 
 .get{
@@ -122,4 +168,16 @@ a{
   border-radius: 3px;
   text-align: center;
   box-sizing: inherit;
+}
+
+.tline{
+  border-style: solid ;
+  border-color: #61affe
+}
+
+#code {
+  width: 100%;
+  float:left;
+  min-height:100px;
+  overflow: hidden;
 }

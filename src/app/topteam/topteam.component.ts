@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {TeamsService} from '../teams.service';
 import { faTrophy } from '@fortawesome/free-solid-svg-icons';
-import './script';
-import './packed';
+
 
 @Component({
   selector: 'app-topteam',
