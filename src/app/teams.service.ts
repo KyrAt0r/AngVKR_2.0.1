@@ -40,13 +40,13 @@ export class TeamsService {
   constructor(private http: HttpClient) { }
 
   getTeams() {
-    return this.http.get<teamlist>('http://saberzero11-001-site1.atempurl.com/api/teams/GetTeams');
-    // return this.http.get<teamlist>('http://saber011-001-site1.htempurl.com/api/teams/GetTeams');
+    return this.http.get<teamlist>('http://olimpres.azurewebsites.net/api/teams/GetTeams');
+    // return this.http.get<teamlist>('http://olimpres.azurewebsites.net/api/teams/GetTeams');
   }
 
 
   TeamList() {
-    this.http.get<content>('http://saberzero11-001-site1.atempurl.com/api/teams/GetTeams');
-    // return this.http.get<teamlist>('http://saber011-001-site1.htempurl.com/api/teams/GetTeams');
+    this.http.get<content>('http://olimpres.azurewebsites.net/api/teams/GetTeams');
+    // return this.http.get<teamlist>('http://olimpres.azurewebsites.net/api/teams/GetTeams');
   }
 }
