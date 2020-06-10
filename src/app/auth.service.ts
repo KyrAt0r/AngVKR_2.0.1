@@ -46,14 +46,14 @@ export class AuthService {
   getUserDetails(login, password) {
     // post these details to API server return user info if correct
 
-    return this.http.post<myData>('http://saberzero11-001-site1.atempurl.com/api/Account/login', {
+    return this.http.post<myData>('http://olimpres.azurewebsites.net/api/Account/login', {
       login,
       password
       });
   }
 
   registerUser(login, password) {
-    return this.http.post<registerResponse>('http://saberzero11-001-site1.atempurl.com/api/Account/register', {
+    return this.http.post<registerResponse>('http://olimpres.azurewebsites.net/api/Account/register', {
       login,
       password
     });
