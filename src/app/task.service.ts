@@ -92,16 +92,16 @@ export class TaskService {
   }
   // delite request
   detiteSubjects(idSubject) {
-    return this.http.post<contentSubjects>('http://olimpres.azurewebsites.net//api/NewService/DeleteSubject)', idSubject);
+    return this.http.post<contentSubjects>('https://olimpres.azurewebsites.net//api/NewService/DeleteSubject)', idSubject);
   }
   detiteTests(idTest) {
-    return this.http.post<contentTests>('http://olimpres.azurewebsites.net//api/NewService/DeleteTest)', idTest);
+    return this.http.post<contentTests>('https://olimpres.azurewebsites.net//api/NewService/DeleteTest)', idTest);
   }
   detiteExercises(idExercises) {
-    return this.http.post<contentExercises>('http://olimpres.azurewebsites.net//api/NewService/DeleteExercises)', idExercises);
+    return this.http.post<contentExercises>('https://olimpres.azurewebsites.net//api/NewService/DeleteExercises)', idExercises);
   }
 
   getTaskText(id) {
-    return this.http.get(`http://olimpres.azurewebsites.net/api/NewService/GetExercises?id=` + id);
+    return this.http.get(`https://olimpres.azurewebsites.net/api/NewService/GetExercises?id=` + id);
   }
 }

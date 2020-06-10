@@ -9,10 +9,10 @@ export class HttpService {
 
   postData(user: User) {
     const body = {login: user.login, password: user.password};
-    return this.http.post('http://olimpres.azurewebsites.net/api/Account/login', body);
+    return this.http.post('https://olimpres.azurewebsites.net/api/Account/login', body);
   }
 
   getData() {
-    return this.http.get('http://olimpres.azurewebsites.net/api/Account/GetAllUsers');
+    return this.http.get('https://olimpres.azurewebsites.net/api/Account/GetAllUsers');
   }
 }

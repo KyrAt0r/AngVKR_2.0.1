@@ -36,18 +36,18 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   isLoggedIn(): Observable<isLoggedIn> {
-    return this.http.get<isLoggedIn>('http://olimpres.azurewebsites.net/api/Account/GetAllUsers');
+    return this.http.get<isLoggedIn>('https://olimpres.azurewebsites.net/api/Account/GetAllUsers');
   }
 
   logout() {
-    return this.http.get<logoutStatus>('http://olimpres.azurewebsites.net/api/Account/login');
+    return this.http.get<logoutStatus>('https://olimpres.azurewebsites.net/api/Account/login');
   }
 
   editPass(id, newPasswrod) {
-    return this.http.post<EPstatus>('http://olimpres.azurewebsites.net/api/Account/resertPassword', { id, newPasswrod });
+    return this.http.post<EPstatus>('https://olimpres.azurewebsites.net/api/Account/resertPassword', { id, newPasswrod });
   }
 
   getUserInfo(id) {
-    return this.http.get(`http://olimpres.azurewebsites.net/api/Account/GetUserById?id=` + id);
+    return this.http.get(`https://olimpres.azurewebsites.net/api/Account/GetUserById?id=` + id);
   }
 }
