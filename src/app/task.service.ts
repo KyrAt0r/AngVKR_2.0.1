@@ -34,30 +34,30 @@ export class TaskService {
   constructor(private http: HttpClient) { }
   // get request
   getSubjects() {
-    return this.http.get<contentSubjects>('http://olimpres.azurewebsites.net/api/NewService/GetSubjects');
+    return this.http.get<contentSubjects>('https://olimpres.azurewebsites.net/api/NewService/GetSubjects');
   }
   getTests() {
-    return this.http.get<contentTests>('http://olimpres.azurewebsites.net/api/NewService/GetTests');
+    return this.http.get<contentTests>('https://olimpres.azurewebsites.net/api/NewService/GetTests');
   }
   getExercises() {
-    return this.http.get<contentExercises>('http://olimpres.azurewebsites.net/api/NewService/GetExercisess');
+    return this.http.get<contentExercises>('https://olimpres.azurewebsites.net/api/NewService/GetExercisess');
   }
   // add request
   postSubjects(idSubject, nameSubject) {
-    return this.http.post<contentSubjects>('http://olimpres.azurewebsites.net/api/NewService/AddSubject', {
+    return this.http.post<contentSubjects>('https://olimpres.azurewebsites.net/api/NewService/AddSubject', {
       idSubject,
       nameSubject
     });
   }
   postTests(idTest, idSubject, nameTest) {
-    return this.http.post<contentTests>('http://olimpres.azurewebsites.net/api/NewService/AddTest?number=1', {
+    return this.http.post<contentTests>('https://olimpres.azurewebsites.net/api/NewService/AddTest?number=1', {
       idTest,
       idSubject,
       nameTest
     });
   }
   postExercises(idExercises, idTest, nameExercises, textExercises, answerExercises, levelExercises) {
-    return this.http.post<contentExercises>('http://olimpres.azurewebsites.net/api/NewService/AddTask', {
+    return this.http.post<contentExercises>('https://olimpres.azurewebsites.net/api/NewService/AddTask', {
       idExercises,
       idTest,
       nameExercises,
@@ -68,20 +68,20 @@ export class TaskService {
   }
   // update request
   updateSubjects(idSubject, nameSubject) {
-    return this.http.post<contentSubjects>('http://olimpres.azurewebsites.net/api/NewService/EditSubject', {
+    return this.http.post<contentSubjects>('https://olimpres.azurewebsites.net/api/NewService/EditSubject', {
       idSubject,
       nameSubject
     });
   }
   updateTest(idTest, idSubject, nameTest) {
-    return this.http.post<contentTests>('http://olimpres.azurewebsites.net/api/NewService/EditTest', {
+    return this.http.post<contentTests>('https://olimpres.azurewebsites.net/api/NewService/EditTest', {
       idTest,
       idSubject,
       nameTest
     });
   }
   updateExercises(idExercises, idTest, nameExercises, textExercises, answerExercises, levelExercises) {
-    return this.http.post<contentExercises>('http://olimpres.azurewebsites.net/api/NewService/EditExercises', {
+    return this.http.post<contentExercises>('https://olimpres.azurewebsites.net/api/NewService/EditExercises', {
       idExercises,
       idTest,
       nameExercises,
