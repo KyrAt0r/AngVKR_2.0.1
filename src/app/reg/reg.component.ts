@@ -2,21 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
-
 import {AuthService} from '../auth.service';
-
-
 
 @Component({
   selector: 'app-reg',
   templateUrl: './reg.component.html',
   styleUrls: ['./reg.component.css']
 })
+
 export class RegComponent implements OnInit {
 
   done: boolean = false;
   ermass: string;
-
   faExclamationCircle=faExclamationCircle;
 
   constructor(private auth: AuthService, private router: Router) { }
@@ -48,5 +45,4 @@ export class RegComponent implements OnInit {
     console.log(login, password);
   }
   }
-
 }
