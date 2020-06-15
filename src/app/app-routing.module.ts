@@ -19,7 +19,7 @@ import {ExpidComponent} from './expid/expid.component';
 const routes: Routes = [
   {path: 'reg', component: RegComponent },
   {path: 'auth', component: AuthComponent},
-  {path: 'home', component: MainPageComponent, canActivate: [AuthGuard]},
+  {path: 'home', component: MainPageComponent, canActivate: [AuthGuard], data: {title: 'Домашняя'}},
   {path: 'exercise', component: ExerciseComponent, canActivate: [AuthGuard]},
   {path: 'exercise/:id', component: ExpidComponent, canActivate: [AuthGuard]},
   {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},

@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -61,6 +61,7 @@ import { ExpidComponent } from './expid/expid.component';
   providers: [
     AuthService,
     UserService,
+    Title,
     AuthGuard
   ],
   bootstrap: [AppComponent]
