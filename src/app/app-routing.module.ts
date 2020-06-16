@@ -15,11 +15,13 @@ import {TopteamComponent} from './topteam/topteam.component';
 import {ExerciseComponent} from './exercise/exercise.component';
 import {UserComponent} from './user/user.component';
 import {ExpidComponent} from './expid/expid.component';
+import {TestComponent} from './test/test.component'
 
 const routes: Routes = [
   {path: 'reg', component: RegComponent },
   {path: 'auth', component: AuthComponent},
-  {path: 'home', component: MainPageComponent, canActivate: [AuthGuard], data: {title: 'Домашняя'}},
+  {path: 'test', component: TestComponent},
+  {path: 'home', component: MainPageComponent, canActivate: [AuthGuard]},
   {path: 'exercise', component: ExerciseComponent, canActivate: [AuthGuard]},
   {path: 'exercise/:id', component: ExpidComponent, canActivate: [AuthGuard]},
   {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},
@@ -29,6 +31,7 @@ const routes: Routes = [
   {path: 'editpass', component: EditPasswordComponent, canActivate: [AuthGuard]},
   {path: 'topteams', component: TopteamComponent, canActivate: [AuthGuard]},
   {path: 'logout', component: LogoutComponent},
+
   {path: 'user', component: UserComponent, canActivate: [AuthGuard]},
 
   {path: '', redirectTo: 'auth', pathMatch: 'full'},

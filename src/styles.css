@@ -20,7 +20,7 @@ body{
 }
 
 body, a:hover, textarea, input {
-  cursor: url(http://cur.cursors-4u.net/anime/ani-12/ani1137.ani), url(http://cur.cursors-4u.net/anime/ani-12/ani1137.gif), default !important;
+  cursor: url(https://cur.cursors-4u.net/anime/ani-12/ani1137.ani), url(https://cur.cursors-4u.net/anime/ani-12/ani1137.gif), default !important;
 }
 
 @-webkit-keyframes rotation {

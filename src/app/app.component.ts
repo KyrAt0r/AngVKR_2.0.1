@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { faHome, faScroll, faBookDead, faSignOutAlt, faDiceD20, faUser, faTrophy } from '@fortawesome/free-solid-svg-icons';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-root',
