@@ -1,22 +1,10 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import { TeamsService} from '../teams.service';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+import { faExclamationCircle, faSignInAlt, faRegistered } from '@fortawesome/free-solid-svg-icons';
+import {GoogleLoginProvider, SocialAuthService, SocialUser} from 'angularx-social-login';
 
-interface AA {
-  idTeam: number;
-  teamName: string;
-  capId: number;
-  coachId: number;
-  teamRating: number;
-}
 
-const AAA: AA[] = [
-  {idTeam: 1, teamName: 'string', capId: 2, coachId: 2, teamRating: 0},
-  {idTeam: 2, teamName: 'testste', capId: 3, coachId: 3, teamRating: 0},
-  {idTeam: 3, teamName: 'Yura', capId: 12, coachId: 15, teamRating: 0},
-  ];
 
 @Component({
   selector: 'app-test',
@@ -25,39 +13,55 @@ const AAA: AA[] = [
 })
 export class TestComponent implements OnInit {
 
-  constructor(private Teams: TeamsService,
-              private router: Router) { }
+  faExclamationCircle = faExclamationCircle;
+  faSignInAlt = faSignInAlt;
+  faRegistered = faRegistered;
 
-  displayedColumns: string[];
-  dataSource ;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  user: SocialUser;
+
+
+  done: boolean = false;
+  ermass: string;
+
+  constructor(private Auth: AuthService,
+              private router: Router,
+              private authService: SocialAuthService) { }
 
   ngOnInit() {
-
-    this.Teams.getTeams().subscribe((respons) => {
-      this.displayedColumns = ['idTeam', 'teamName', 'capId', 'coachId', 'teamRating'];
-      this.dataSource.data = (Array.of<AA>(JSON.parse(JSON.stringify(respons.content))));
-
-      this.dataSource.sort = this.sort;
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
     });
   }
 
-
-  getTeamss() {
-    this.Teams.getTeams().subscribe((respons) => {
-      this.displayedColumns = ['idTeam', 'teamName', 'capId', 'coachId', 'teamRating'];
-      this.dataSource.data = (Array.of(JSON.stringify(respons.content)));
-      this.dataSource.sort = this.sort;
-      alert(JSON.stringify(JSON.stringify(respons.content).replace('"', ' ' )));
-    });
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
 
-  AAA(){
-    this.Teams.getTeams().subscribe((respons) => {
-      this.displayedColumns = ['idTeam', 'teamName', 'capId', 'coachId', 'teamRating'];
-      this.dataSource = new MatTableDataSource(AAA);
-      this.dataSource.sort = this.sort;
-      alert(AAA);
+  signOut(): void {
+    this.authService.signOut();
+  }
+
+  loginUser(event) {
+    event.preventDefault();
+    const target = event.target;
+    const login = target.querySelector('#login').value;
+    const password = target.querySelector('#password').value;
+
+    this.Auth.getUserDetails(login, password).subscribe(data => {
+      if (data.responseInfo.status === 0 && data.responseInfo.errorMessage === null) {
+        this.router.navigate(['home']);
+        console.log(data);
+        this.Auth.setLoggedIn(true);
+        localStorage.setItem('ID', String(data.content.id));
+        localStorage.setItem('access_token', data.content.access_token);
+        localStorage.setItem('username', data.content.username);
+        this.done = true;
+      } else {
+        this.ermass = data.responseInfo.errorMessage;
+      }
+      console.log(login , password);
+
     });
   }
 }
+

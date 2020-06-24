@@ -1,23 +1,20 @@
 <head><title>Регистрация</title></head>
 <div class="limiter">
   <div class="login-cont">
-    <div class="wrap-login">
-      <div class="login-form">
-        <h1 class="login-title"> Регистрация </h1>
-        <form (submit)="registerUser($event)">
-          <div class="wrap-input">
-            <input class="input1 typ1" type="login"  placeholder="Логин" id="login">
-            <input class="input1 typ2" type="password"  placeholder="Пароль" id="password">
-            <input class="input1 typ2" type="password"  placeholder="Повторите пароль" id="cpassword">
-          </div>
-          <button class="myButtonR" type="submit" id="submit">Зарегистрироваться</button>
-          <button class="myButtonL" onclick="document.location='/auth'"> Авторизация </button>
-
-        </form>
+    <form class="box" (submit)="registerUser($event)">
+      <h1 class="login-title">
+        Регистрация
+      </h1>
+      <div class="wrap-input">
+        <input type="text"  placeholder="Логин" id="login">
+        <input type="password"  placeholder="Пароль" id="password">
+        <input type="password"  placeholder="Повторите пароль" id="cpassword">
         <div class="error" *ngIf="ermass">
           <p> <fa-icon [icon]="faExclamationCircle"></fa-icon> {{ermass}}</p>
         </div>
       </div>
-    </div>
+      <button class="but" type="submit" id="submit">Зарегистрироваться</button>
+      <button class="but" onclick="document.location='/auth'"> Авторизация </button>
+    </form>
   </div>
 </div>

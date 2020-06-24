@@ -16,6 +16,10 @@ import {ExerciseComponent} from './exercise/exercise.component';
 import {UserComponent} from './user/user.component';
 import {ExpidComponent} from './expid/expid.component';
 import {TestComponent} from './test/test.component'
+import {TaskComponent} from './task/task.component';
+import {SubjChoiceComponent} from './subj-choice/subj-choice.component';
+import {TestsChoiceComponent} from './tests-choice/tests-choice.component';
+import {TaskidComponent} from './taskid/taskid.component';
 
 const routes: Routes = [
   {path: 'reg', component: RegComponent },
@@ -24,6 +28,10 @@ const routes: Routes = [
   {path: 'home', component: MainPageComponent, canActivate: [AuthGuard]},
   {path: 'exercise', component: ExerciseComponent, canActivate: [AuthGuard]},
   {path: 'exercise/:id', component: ExpidComponent, canActivate: [AuthGuard]},
+  {path: 'subject', component: SubjChoiceComponent, canActivate: [AuthGuard]},
+  {path: 'subject/:nameSub', component: TestsChoiceComponent, canActivate: [AuthGuard]},
+  {path: 'tasks', component: TaskComponent, canActivate: [AuthGuard]},
+  {path: 'tasks/:id', component: TaskidComponent, canActivate: [AuthGuard]},
   {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},
   {path: 'create-test', component: CreateEditComponent, canActivate: [AuthGuard]},
   {path: 'create-subject', component: CreateSubjectComponent, canActivate: [AuthGuard]},
@@ -34,7 +42,7 @@ const routes: Routes = [
 
   {path: 'user', component: UserComponent, canActivate: [AuthGuard]},
 
-  {path: '', redirectTo: 'auth', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: AuthComponent, canActivate: [AuthGuard]}
 ];
 

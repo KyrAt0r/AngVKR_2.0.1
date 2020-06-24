@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationCircle, faSignInAlt, faRegistered } from '@fortawesome/free-solid-svg-icons';
+import {GoogleLoginProvider, SocialAuthService, SocialUser} from 'angularx-social-login';
 
 
 @Component({
@@ -12,14 +13,31 @@ import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 export class AuthComponent implements OnInit {
 
   faExclamationCircle = faExclamationCircle;
+  faSignInAlt = faSignInAlt;
+  faRegistered = faRegistered;
+
+  user: SocialUser;
+
 
   done: boolean = false;
   ermass: string;
 
   constructor(private Auth: AuthService,
-              private router: Router) { }
+              private router: Router,
+              private authService: SocialAuthService) { }
 
   ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+    });
+  }
+
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  }
+
+  signOut(): void {
+    this.authService.signOut();
   }
 
   loginUser(event) {

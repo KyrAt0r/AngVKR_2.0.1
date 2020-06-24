@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,500i,700,700i&display=swap');
+
+root{
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h1{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 25px;
+  display: block;
+}
+
+p{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+}
+
+span{
+  font-family: 'Fira Sans', sans-serif;
+  color: #3b3b3b;
+  margin: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 6px 15px;
+  width: 80px;
+  border-color: #61affe;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.limiter{
+  display: flex;
+  min-height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.main{
+  width: 100%;
+  margin-top: 90px;
+  margin-right: 90px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  padding: 30px;
+  background-color: #b9bbbe;
+  border-radius: 10px;
+  min-height: 100%;
+}
+
+.content{
+  min-height: 100%;
+  align-items: center;
+}
+
+.task-cont{
+  background: #9a9a9e;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.lvl{
+  text-align: right;
+  padding: 0px 25px 0px 25px;
+}
+
+.item_button{
+  text-align: right;
+  padding: 0px 25px 0px 25px;
+}
+
+.myBut{
+  width: 80px;
+  height: 33px;
+  border-radius: 20px;
+  background-color: #ecf0f3;
+  -webkit-box-shadow: -10px -10px 30px 0px #d1d9e6 inset, 10px 10px 30px 0px #ffffff inset;
+  -moz-box-shadow: -10px -10px 30px 0px #d1d9e6 inset, 10px 10px 30px 0px #ffffff inset;
+  box-shadow: -10px -10px 30px 0px #d1d9e6 inset, 10px 10px 30px 0px #ffffff inset;
+  transition: 0.5s;
+}

@@ -1,0 +1,25 @@
+<head><title>Задачи</title></head>
+<div class="limiter" xmlns="http://www.w3.org/1999/html">
+  <div class="main">
+    <div class="content">
+      <div *ngFor="let contents of responsExercises.content">
+        <div class="task-cont">
+          <div class="item_information" id="item_{{contents.idExercises}}">
+            <h3 class="item_text name_task">
+              <p>{{contents.nameExercises}}</p>
+            </h3>
+            <p class="item_text text_task">
+              {{contents.textExercises}}
+            </p>
+            <p class="lvl">
+              Lvl: {{contents.levelExercises}}
+            </p>
+          </div>
+          <div class="item_button">
+            <button class="myBut" [routerLink] ="contents.idExercises">Решать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
