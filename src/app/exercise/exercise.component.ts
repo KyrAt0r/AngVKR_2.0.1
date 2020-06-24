@@ -21,7 +21,7 @@ import {TaskService} from '../task.service';
 })
 export class ExerciseComponent implements OnInit {
 
-  constructor(private http: HttpClient,
+  constructor(
               private Subject: TaskService) { }
 
   responsSubjects: any;

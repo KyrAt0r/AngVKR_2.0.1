@@ -1,23 +1,33 @@
+<head><title>Авторизация</title></head>
 <div class="limiter">
   <div class="login-cont">
-    <div class="wrap-login">
-      <div class="login-form">
-        <h1 class="login-title">
-          Авторизация
-        </h1>
-        <form (submit)="loginUser($event)">
-          <div class="wrap-input">
-            <input class="input1 typ1" type="login" placeholder="Логин" id="login">
-            <input class="input1 typ2" type="password" placeholder="Пароль" id="password">
-          </div>
-          <button class="myButtonL" type="submit" id="submit">Войти</button>
-
-          <button class="myButtonR" onclick="document.location='/reg'" >Зарегистрирвоаться</button>
-        </form>
+    <form class="box" (submit)="loginUser($event)">
+      <h1 class="login-title">
+        Авторизация
+      </h1>
+      <div class="wrap-input">
+        <input type="text" name="" placeholder="Логин" id="login">
+        <input type="password" name="" placeholder="Пароль" id="password">
         <div class="error" *ngIf="ermass">
           <p> <fa-icon [icon]="faExclamationCircle"></fa-icon> {{ermass}}</p>
         </div>
       </div>
-    </div>
+      <button class="but" type="submit" id="submit"><fa-icon [icon]="faSignInAlt"></fa-icon>   Войти</button>
+      <button class="but" onclick="document.location='/reg'">Зарегистрирвоаться</button>
+    </form>
+  </div>
+</div>
+<div *ngIf="user" class="card text-center">
+  <h6 class="card-header">
+    Social Login Demo
+  </h6>
+  <div class="card-block"></div>
+  <img *ngIf="user.photoUrl" class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+  <div class="card-block">
+    <h4 class="card-title">{{ user.name }}</h4>
+    <p class="card-text">{{ user.email }}</p>
+  </div>
+  <div class="card-block">
+    <button class="btn btn-danger" (click)="signOut()">Sign out</button>
   </div>
 </div>

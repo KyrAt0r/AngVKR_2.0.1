@@ -29,19 +29,25 @@ interface contentExercises {
 @Injectable({
   providedIn: 'root'
 })
+
 export class TaskService {
 
   constructor(private http: HttpClient) { }
   // get request
+  ///get///
   getSubjects() {
     return this.http.get<contentSubjects>('https://olimpres.azurewebsites.net/api/NewService/GetSubjects');
   }
   getTests() {
     return this.http.get<contentTests>('https://olimpres.azurewebsites.net/api/NewService/GetTests');
   }
+  getTaskText(id) {
+    return this.http.get(`https://olimpres.azurewebsites.net/api/NewService/GetExercises?id=` + id);
+  }
   getExercises() {
     return this.http.get<contentExercises>('https://olimpres.azurewebsites.net/api/NewService/GetExercisess');
   }
+  ///post///
   // add request
   postSubjects(idSubject, nameSubject) {
     return this.http.post<contentSubjects>('https://olimpres.azurewebsites.net/api/NewService/AddSubject', {
@@ -99,9 +105,5 @@ export class TaskService {
   }
   detiteExercises(idExercises) {
     return this.http.post<contentExercises>('https://olimpres.azurewebsites.net/api/NewService/DeleteExercises)', idExercises);
-  }
-
-  getTaskText(id) {
-    return this.http.get(`https://olimpres.azurewebsites.net/api/NewService/GetExercises?id=` + id);
   }
 }

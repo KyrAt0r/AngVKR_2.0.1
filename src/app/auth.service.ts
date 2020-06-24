@@ -10,7 +10,6 @@ interface content {
   access_token: string;
   id: number;
   username: string;
-
 }
 
 interface responseInfo {
@@ -28,6 +27,7 @@ interface registerResponse {
 }
 
 @Injectable()
+
 export class AuthService {
 
   private loggedInStatus = JSON.parse(localStorage.getItem('loggedIn') || 'false');

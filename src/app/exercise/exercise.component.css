@@ -2,6 +2,7 @@
   border-radius: 10px;
   background: #9a9a9e;
   padding: 10px 10px 10px 10px;
+  margin: 10px;
 }
 .name_task{
   padding: 0px 0px 0px 10px;
@@ -20,12 +21,11 @@
 .item_text{
   margin: 5px 0px 5px 0px;
 }
-.item_information{
 
-}
 .item_button{
   text-align: right;
 }
+
 .top{
   background-color: #4d9238;
   left: 10%;
@@ -95,8 +95,6 @@ main{
   padding: 0;
   margin: 0;
 }
-
-
 
 .backgraundWindow{
   z-index: 1;
